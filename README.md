@@ -5,7 +5,8 @@
 
 
 接口api文档 http://119.145.40.140:10091/anonymous/login
-测试账号 faben_huangzhigang@ukelink.com
+
+参考：使用vue重写nodejs的那个项目而做，结合公司业务，修改部分功能，添加国际化
 
 
 ###目录结构
