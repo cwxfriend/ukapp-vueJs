@@ -1,0 +1,1 @@
+{"title":"我的訂單","ordernum":"訂單號","orderdate":"訂單日期","orderprod":"訂單商品","ordertr":"訂單渠道","orderp":"訂單金額","orders":"訂單狀態","p":"個項目","show":"顯示","per":"每頁","first":"首頁","prev":"上一頁","next":"下一頁","last":"尾頁","list":{"orderSN":"訂單號","createTime":"訂單日期","orderItems":"訂單商品","channelType":"訂單渠道","amount":"訂單金額","orderStatus":"訂單狀態"}}

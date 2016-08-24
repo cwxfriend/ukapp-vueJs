@@ -1,0 +1,223 @@
+@charset "utf-8";
+/*banner*/
+
+/*导航*/
+
+.navtion {
+    min-width: 1200px;
+    background: #000;
+    /*opacity*/
+    filter:alpha(opacity=80);       /* IE */
+    -moz-opacity:0.8;
+    -webkit-opacity:0.8;
+    opacity: 0.8;
+}
+
+.without_top{
+    top: 0px;
+    width: 100%;
+}
+
+.navtion_logo {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    line-height: 60px;
+}
+
+.navtion_logo img {
+    width: 167px;
+    height: 41px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.navtion_bar {
+    position: absolute;
+    text-align: right;
+    overflow: hidden;
+    top: 0;
+    right: 370px;
+    bottom: 0;
+    left: 290px;
+}
+
+.navtion_loading {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    bottom: 0;
+}
+
+.loading_name {
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    background-color: #69B147;
+    cursor: pointer;
+}
+
+.loading_name .icon_loading {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 12px;
+}
+
+.loading_name .icon_loading img {
+    vertical-align: middle;
+    margin-top: -6px;
+}
+
+.loading_name a, .loading_name a:visited {
+    display: inline-block;
+    max-width: 122px;
+    font-size: 16px;
+    color: #fff;
+}
+.loading_name a:first-child {border-right: 1px solid #fff;}
+
+.loading_name a:hover {
+    color: #fff;
+}
+
+.navtion_bar .nav_li {
+    display: inline-block;
+    height: 100%;
+    line-height: 57px;
+    margin: 0 15px;
+}
+
+.navtion_bar .nav_li .nav_header a, .navtion_bar .nav_li .nav_header a:visited {
+    display: block;
+/*    padding: 0 15px;*/
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav_sub_text li a {color: #333;}
+
+.navtion_bar .nav_li a:hover {
+    border-bottom: 3px solid #69B147;
+    color: #69B147;
+}
+
+body .navtion_bar .nav_li .current {
+    border-bottom: 3px solid #69B147;
+    color: #69B147;
+}
+
+.functions_loading {
+    width: 100%;
+    position: absolute;
+    /*top: 92px;*/
+    right: 0;
+    z-index: 500;
+    background: url(../images/glocalme/triangle.png) no-repeat center -20px;
+    background-size: 20px 11px;
+    display: none;
+}
+
+.functions_loading li {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #a9a9a9;
+    /*background-color: rgba(0,0,0,0.5);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000, endColorstr=#BF000000);*/
+    background: #000;
+    text-align: center;
+    /*opacity*/
+    filter:alpha(opacity=50);       /* IE */
+    -moz-opacity:0.5;
+    -webkit-opacity:0.5;
+    opacity: 0.5;
+}
+
+.functions_loading li a, .functions_loading li a:visited {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+
+.functions_loading li a:hover {
+    color: #333;
+}
+
+.functions_loading_icon {
+    display: inline-block;
+    width: 20px;
+    height: 11px;
+    position: absolute;
+    z-index: 100;
+    top: -16px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.functions_loading_icon img {
+    width: 20px;
+    height: 11px;
+}
+
+
+/*导航下拉*/
+
+/*.nav_sub {
+    position: fixed;
+    top: 136px;
+    left: 50%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000, endColorstr=#BF000000);
+    z-index: 100;
+    text-align: right;
+    display: none;
+}*/
+
+.without_top .nav_sub{
+    top: 60px;
+}
+
+/*.nav_sub li {
+    display: inline-block;
+}
+
+.g_series {
+    display: inline-block;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.g_series .g_1 {
+    display: inline-block;
+}
+
+.g_series .g_1 img {
+    vertical-align: middle;
+}
+
+.nav_sub_text {
+    display: inline-block;
+}
+
+.nav_sub_text li {
+    margin: 0 22px;
+}*/
+
+.nav_sub .btn_1 {
+    margin-right: 100px;
+}
+
+.nav_sub .btn_1 a, .nav_sub .btn_1 a:visited {
+    color: #fff;
+}
+
+.navtion_bar .nav_li .btn_1 a:hover {
+    color: #fff;
+    border-bottom: none;
+}

@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+
+/*左侧菜单栏*/
+.pa_left_div {width: 260px;}
+.pa_myaccount {display: inline-block;margin: 25px 0;}
+.pa_accountinfo {border: 1px solid #dedede;text-align: center;background: #fff;}
+.pa_account_name {margin-top: 10px;}
+.pa_account_name img {border-radius: 100%;width: 45px;height: 45px; display: none; /*margin: 0 10px 0 20px;*/}
+.pa_account_name img.current {display: inline-block;}
+.pa_account_name span {line-height: 30px;display: inline-block;width: 90%;color: #666;}
+.pa_balance {color: #666;font-size: 14px; width: 90%; margin:0 auto;}
+.pa_balance span { color: #ef7c30; word-wrap:break-word; word-break:break-all;}
+.pa_charge{margin-top: 10px;}
+.pa_charge button {background: #ef7c30;border: none;padding: 8px;color: #fff;cursor: pointer;margin-left: 10px; font-size: 12px;}
+.pa_charge button:hover {background: #d26e2c;}
+.pa_nav {margin-top: 10px;border-top: 1px solid #dedede;font-size: 16px;}
+.pa_nav li {text-align: center;position: relative;border-bottom: 1px solid #dedede;line-height: 40px;}
+.pa_nav li:last-child {border-bottom: none;}
+.pa_nav li a {display: block;color: #333; text-decoration: none;}
+.pa_nav li a:hover {background: #6bb04d;color: #fff;}
+.pa_nav .active {background: #6bb04d;color: #fff;}
+/*.pa_nav li em {background: url('../img/cn/icon/right.png') no-repeat;width: 12px;height: 21px;position: absolute;top: 25px;right: 38px;}
+.pa_nav li a:hover + em {background: url('../img/cn/icon/right2.png') no-repeat;}*/
+

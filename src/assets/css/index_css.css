@@ -1,0 +1,79 @@
+@charset "utf-8";
+/*banner*/
+
+#btn {
+    position: absolute;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+    bottom: 22px;
+    left: 50%;
+    margin-left: -110px;
+}
+
+#btn a {
+    cursor: pointer;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 4px;
+}
+
+#btn a.active {
+    background: #69B147;
+}
+
+#btn a:hover {
+    background: #69B147;
+}
+
+*html .ie6_out {
+    margin-left: 1000px;
+    zoom: 1;
+}
+
+*html .ie6_in {
+    position: relative;
+    float: left;
+    margin-left: -1000px;
+}
+
+
+/*特产卖点*/
+
+.selling {
+    width: 1200px;
+    height: 277px;
+    margin: 30px auto 50px auto;
+}
+
+.selling li {
+    display: inline-block;
+    width: 300px;
+    height: 277px;
+    float: left;
+}
+
+.selling li a {
+    display: table-cell;
+    width: 300px;
+    height: 203px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.selling li a img {
+    vertical-align: middle;
+}
+
+.selling li p {
+    width: 100%;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    font-size: 22px;
+    color: #242424;
+}

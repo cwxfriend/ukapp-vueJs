@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for libs\md5.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">libs/</a> md5.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.11% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>29/180</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.76% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.11% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>29/180</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">7 statements, 5 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*istanbul ignore next*/(function (global, factory) {
+    <span class="skip-if-branch" title="if path not taken" >I</span>if (typeof define === "function" &amp;&amp; <span class="branch-1 cbranch-skip" title="branch not covered" >define.amd)</span> {
+<span class="cstat-skip" title="statement not covered" >        define(["exports"], factory);</span>
+    } else <span class="skip-if-branch" title="if path not taken" >I</span>if (typeof exports !== "undefined") {
+<span class="cstat-skip" title="statement not covered" >        factory(exports);</span>
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports);
+        global.md5 = mod.exports;
+    }
+})(this, function (exports) {
+    "use strict";
+&nbsp;
+    /**
+     * Created by chenwenxiao on 2016/8/19.
+     */
+    /*
+     Javascript MD5 library - version 0.2
+    
+     coded (2011) by Luigi Galli - LG@4e71.org - http://faultylabs.com
+    
+     The below code is PUBLIC DOMAIN - NO WARRANTY!
+    
+     Changelog: Version 0.2 - 2011-05-22
+     *FIXED: serious integer overflow problems which could cause a wrong MD5 hash being returned
+    
+     Version 0.1 - 2011
+     -Initial version
+     */
+&nbsp;
+    var faultylabs = {};
+    faultylabs.MD5 = <span class="fstat-no" title="function not covered" >function (data) {</span>
+&nbsp;
+        // for test/debug
+<span class="fstat-no" title="function not covered" >        function fflog(msg) {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+<span class="cstat-no" title="statement not covered" >                console.log(msg);</span>
+            } catch (e) {}
+        }
+&nbsp;
+        // convert number to (unsigned) 32 bit hex, zero filled string
+<span class="fstat-no" title="function not covered" >        function to_zerofilled_hex(n) {</span>
+<span class="cstat-no" title="statement not covered" >            var t1 = (n &gt;&gt;&gt; 24).toString(16);</span>
+<span class="cstat-no" title="statement not covered" >            var t2 = (n &amp; 0x00FFFFFF).toString(16);</span>
+<span class="cstat-no" title="statement not covered" >            return "00".substr(0, 2 - t1.length) + t1 + "000000".substr(0, 6 - t2.length) + t2;</span>
+        }
+&nbsp;
+        // convert array of chars to array of bytes (note: Unicode not supported)
+<span class="fstat-no" title="function not covered" >        function chars_to_bytes(ac) {</span>
+<span class="cstat-no" title="statement not covered" >            var retval = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; ac.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                retval = retval.concat(str_to_bytes(ac[i]));</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return retval;</span>
+        }
+&nbsp;
+        // convert a 64 bit unsigned number to array of bytes. Little endian
+<span class="fstat-no" title="function not covered" >        function int64_to_bytes(num) {</span>
+<span class="cstat-no" title="statement not covered" >            var retval = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; 8; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                retval.push(num &amp; 0xFF);</span>
+<span class="cstat-no" title="statement not covered" >                num = num &gt;&gt;&gt; 8;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return retval;</span>
+        }
+&nbsp;
+        //  32 bit left-rotation
+<span class="fstat-no" title="function not covered" >        function rol(num, places) {</span>
+<span class="cstat-no" title="statement not covered" >            return num &lt;&lt; places &amp; 0xFFFFFFFF | num &gt;&gt;&gt; 32 - places;</span>
+        }
+&nbsp;
+        // The 4 MD5 functions
+<span class="fstat-no" title="function not covered" >        function fF(b, c, d) {</span>
+<span class="cstat-no" title="statement not covered" >            return b &amp; c | ~b &amp; d;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function fG(b, c, d) {</span>
+<span class="cstat-no" title="statement not covered" >            return d &amp; b | ~d &amp; c;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function fH(b, c, d) {</span>
+<span class="cstat-no" title="statement not covered" >            return b ^ c ^ d;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function fI(b, c, d) {</span>
+<span class="cstat-no" title="statement not covered" >            return c ^ (b | ~d);</span>
+        }
+&nbsp;
+        // pick 4 bytes at specified offset. Little-endian is assumed
+<span class="fstat-no" title="function not covered" >        function bytes_to_int32(arr, off) {</span>
+<span class="cstat-no" title="statement not covered" >            return arr[off + 3] &lt;&lt; 24 | arr[off + 2] &lt;&lt; 16 | arr[off + 1] &lt;&lt; 8 | arr[off];</span>
+        }
+&nbsp;
+        /*
+         Conver string to array of bytes in UTF-8 encoding
+         See:
+         http://www.dangrossman.info/2007/05/25/handling-utf-8-in-javascript-php-and-non-utf8-databases/
+         http://stackoverflow.com/questions/1240408/reading-bytes-from-a-javascript-string
+         How about a String.getBytes(&lt;ENCODING&gt;) for Javascript!? Isn't it time to add it?
+         */
+<span class="fstat-no" title="function not covered" >        function str_to_bytes(str) {</span>
+            // alert("got " + str.length + " chars")
+<span class="cstat-no" title="statement not covered" >            var retval = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; str.length; i++) /*istanbul ignore next*/{</span>
+<span class="cstat-skip" title="statement not covered" >                if (str.charCodeAt(i) &lt;= 0x7F) {</span>
+<span class="cstat-skip" title="statement not covered" >                    retval.push(str.charCodeAt(i));</span>
+                } else {
+<span class="cstat-skip" title="statement not covered" >                    var tmp = encodeURIComponent(str.charAt(i)).substr(1).split('%');</span>
+<span class="cstat-skip" title="statement not covered" >                    for (var j = 0; j &lt; tmp.length; j++) {</span>
+<span class="cstat-skip" title="statement not covered" >                        retval.push(parseInt(tmp[j], 0x10));</span>
+                    }
+                }
+            }<span class="cstat-no" title="statement not covered" >return retval;</span>
+        };
+&nbsp;
+        // convert the 4 32-bit buffers to a 128 bit hex string. (Little-endian is assumed)
+<span class="fstat-no" title="function not covered" >        function int128le_to_hex(a, b, c, d) {</span>
+<span class="cstat-no" title="statement not covered" >            var ra = "";</span>
+<span class="cstat-no" title="statement not covered" >            var t = 0;</span>
+<span class="cstat-no" title="statement not covered" >            var ta = 0;</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 3; i &gt;= 0; i--) {</span>
+<span class="cstat-no" title="statement not covered" >                ta = arguments[i];</span>
+<span class="cstat-no" title="statement not covered" >                t = ta &amp; 0xFF;</span>
+<span class="cstat-no" title="statement not covered" >                ta = ta &gt;&gt;&gt; 8;</span>
+<span class="cstat-no" title="statement not covered" >                t = t &lt;&lt; 8;</span>
+<span class="cstat-no" title="statement not covered" >                t = t | ta &amp; 0xFF;</span>
+<span class="cstat-no" title="statement not covered" >                ta = ta &gt;&gt;&gt; 8;</span>
+<span class="cstat-no" title="statement not covered" >                t = t &lt;&lt; 8;</span>
+<span class="cstat-no" title="statement not covered" >                t = t | ta &amp; 0xFF;</span>
+<span class="cstat-no" title="statement not covered" >                ta = ta &gt;&gt;&gt; 8;</span>
+<span class="cstat-no" title="statement not covered" >                t = t &lt;&lt; 8;</span>
+<span class="cstat-no" title="statement not covered" >                t = t | ta;</span>
+<span class="cstat-no" title="statement not covered" >                ra = ra + to_zerofilled_hex(t);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return ra;</span>
+        }
+&nbsp;
+        // check input data type and perform conversions if needed
+<span class="cstat-no" title="statement not covered" >        var databytes = null;</span>
+        // String
+<span class="cstat-no" title="statement not covered" >        if (typeof data == 'string') {</span>
+            // convert string to array bytes
+<span class="cstat-no" title="statement not covered" >            databytes = str_to_bytes(data);</span>
+        } else <span class="cstat-no" title="statement not covered" >if (data.constructor == Array) {</span>
+<span class="cstat-no" title="statement not covered" >            if (data.length === 0) {</span>
+                // if it's empty, just assume array of bytes
+<span class="cstat-no" title="statement not covered" >                databytes = data;</span>
+            } else <span class="cstat-no" title="statement not covered" >if (typeof data[0] == 'string') {</span>
+<span class="cstat-no" title="statement not covered" >                databytes = chars_to_bytes(data);</span>
+            } else <span class="cstat-no" title="statement not covered" >if (typeof data[0] == 'number') {</span>
+<span class="cstat-no" title="statement not covered" >                databytes = data;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                fflog("input data type mismatch");</span>
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+            }
+        } else {
+<span class="cstat-no" title="statement not covered" >            fflog("input data type mismatch");</span>
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+        }
+&nbsp;
+        // save original length
+<span class="cstat-no" title="statement not covered" >        var org_len = databytes.length;</span>
+&nbsp;
+        // first append the "1" + 7x "0"
+<span class="cstat-no" title="statement not covered" >        databytes.push(0x80);</span>
+&nbsp;
+        // determine required amount of padding
+<span class="cstat-no" title="statement not covered" >        var tail = databytes.length % 64;</span>
+        // no room for msg length?
+<span class="cstat-no" title="statement not covered" >        if (tail &gt; 56) {</span>
+            // pad to next 512 bit block
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; 64 - tail; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                databytes.push(0x0);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            tail = databytes.length % 64;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; 56 - tail; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            databytes.push(0x0);</span>
+        }
+        // message length in bits mod 512 should now be 448
+        // append 64 bit, little-endian original msg length (in *bits*!)
+<span class="cstat-no" title="statement not covered" >        databytes = databytes.concat(int64_to_bytes(org_len * 8));</span>
+&nbsp;
+        // initialize 4x32 bit state
+<span class="cstat-no" title="statement not covered" >        var h0 = 0x67452301;</span>
+<span class="cstat-no" title="statement not covered" >        var h1 = 0xEFCDAB89;</span>
+<span class="cstat-no" title="statement not covered" >        var h2 = 0x98BADCFE;</span>
+<span class="cstat-no" title="statement not covered" >        var h3 = 0x10325476;</span>
+&nbsp;
+        // temp buffers
+<span class="cstat-no" title="statement not covered" >        var a = 0,</span>
+            b = 0,
+            c = 0,
+            d = 0;
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function _add(n1, n2) {</span>
+<span class="cstat-no" title="statement not covered" >            return 0x0FFFFFFFF &amp; n1 + n2;</span>
+        }
+&nbsp;
+        // function update partial state for each run
+<span class="cstat-no" title="statement not covered" >        var updateRun = <span class="fstat-no" title="function not covered" >function updateRun(nf, sin32, dw32, b32) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var temp = d;</span>
+<span class="cstat-no" title="statement not covered" >            d = c;</span>
+<span class="cstat-no" title="statement not covered" >            c = b;</span>
+            //b = b + rol(a + (nf + (sin32 + dw32)), b32);
+<span class="cstat-no" title="statement not covered" >            b = _add(b, rol(_add(a, _add(nf, _add(sin32, dw32))), b32));</span>
+<span class="cstat-no" title="statement not covered" >            a = temp;</span>
+        };
+&nbsp;
+        // Digest message
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; databytes.length / 64; i++) {</span>
+            // initialize run
+<span class="cstat-no" title="statement not covered" >            a = h0;</span>
+<span class="cstat-no" title="statement not covered" >            b = h1;</span>
+<span class="cstat-no" title="statement not covered" >            c = h2;</span>
+<span class="cstat-no" title="statement not covered" >            d = h3;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var ptr = i * 64;</span>
+&nbsp;
+            // do 64 runs
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xd76aa478, bytes_to_int32(databytes, ptr), 7);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xe8c7b756, bytes_to_int32(databytes, ptr + 4), 12);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x242070db, bytes_to_int32(databytes, ptr + 8), 17);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xc1bdceee, bytes_to_int32(databytes, ptr + 12), 22);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xf57c0faf, bytes_to_int32(databytes, ptr + 16), 7);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x4787c62a, bytes_to_int32(databytes, ptr + 20), 12);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xa8304613, bytes_to_int32(databytes, ptr + 24), 17);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xfd469501, bytes_to_int32(databytes, ptr + 28), 22);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x698098d8, bytes_to_int32(databytes, ptr + 32), 7);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x8b44f7af, bytes_to_int32(databytes, ptr + 36), 12);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xffff5bb1, bytes_to_int32(databytes, ptr + 40), 17);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x895cd7be, bytes_to_int32(databytes, ptr + 44), 22);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x6b901122, bytes_to_int32(databytes, ptr + 48), 7);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xfd987193, bytes_to_int32(databytes, ptr + 52), 12);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0xa679438e, bytes_to_int32(databytes, ptr + 56), 17);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fF(b, c, d), 0x49b40821, bytes_to_int32(databytes, ptr + 60), 22);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xf61e2562, bytes_to_int32(databytes, ptr + 4), 5);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xc040b340, bytes_to_int32(databytes, ptr + 24), 9);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0x265e5a51, bytes_to_int32(databytes, ptr + 44), 14);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xe9b6c7aa, bytes_to_int32(databytes, ptr), 20);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xd62f105d, bytes_to_int32(databytes, ptr + 20), 5);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0x2441453, bytes_to_int32(databytes, ptr + 40), 9);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xd8a1e681, bytes_to_int32(databytes, ptr + 60), 14);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xe7d3fbc8, bytes_to_int32(databytes, ptr + 16), 20);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0x21e1cde6, bytes_to_int32(databytes, ptr + 36), 5);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xc33707d6, bytes_to_int32(databytes, ptr + 56), 9);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xf4d50d87, bytes_to_int32(databytes, ptr + 12), 14);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0x455a14ed, bytes_to_int32(databytes, ptr + 32), 20);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xa9e3e905, bytes_to_int32(databytes, ptr + 52), 5);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0xfcefa3f8, bytes_to_int32(databytes, ptr + 8), 9);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0x676f02d9, bytes_to_int32(databytes, ptr + 28), 14);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fG(b, c, d), 0x8d2a4c8a, bytes_to_int32(databytes, ptr + 48), 20);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xfffa3942, bytes_to_int32(databytes, ptr + 20), 4);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0x8771f681, bytes_to_int32(databytes, ptr + 32), 11);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0x6d9d6122, bytes_to_int32(databytes, ptr + 44), 16);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xfde5380c, bytes_to_int32(databytes, ptr + 56), 23);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xa4beea44, bytes_to_int32(databytes, ptr + 4), 4);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0x4bdecfa9, bytes_to_int32(databytes, ptr + 16), 11);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xf6bb4b60, bytes_to_int32(databytes, ptr + 28), 16);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xbebfbc70, bytes_to_int32(databytes, ptr + 40), 23);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0x289b7ec6, bytes_to_int32(databytes, ptr + 52), 4);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xeaa127fa, bytes_to_int32(databytes, ptr), 11);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xd4ef3085, bytes_to_int32(databytes, ptr + 12), 16);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0x4881d05, bytes_to_int32(databytes, ptr + 24), 23);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xd9d4d039, bytes_to_int32(databytes, ptr + 36), 4);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xe6db99e5, bytes_to_int32(databytes, ptr + 48), 11);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0x1fa27cf8, bytes_to_int32(databytes, ptr + 60), 16);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fH(b, c, d), 0xc4ac5665, bytes_to_int32(databytes, ptr + 8), 23);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xf4292244, bytes_to_int32(databytes, ptr), 6);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x432aff97, bytes_to_int32(databytes, ptr + 28), 10);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xab9423a7, bytes_to_int32(databytes, ptr + 56), 15);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xfc93a039, bytes_to_int32(databytes, ptr + 20), 21);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x655b59c3, bytes_to_int32(databytes, ptr + 48), 6);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x8f0ccc92, bytes_to_int32(databytes, ptr + 12), 10);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xffeff47d, bytes_to_int32(databytes, ptr + 40), 15);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x85845dd1, bytes_to_int32(databytes, ptr + 4), 21);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x6fa87e4f, bytes_to_int32(databytes, ptr + 32), 6);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xfe2ce6e0, bytes_to_int32(databytes, ptr + 60), 10);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xa3014314, bytes_to_int32(databytes, ptr + 24), 15);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x4e0811a1, bytes_to_int32(databytes, ptr + 52), 21);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xf7537e82, bytes_to_int32(databytes, ptr + 16), 6);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xbd3af235, bytes_to_int32(databytes, ptr + 44), 10);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0x2ad7d2bb, bytes_to_int32(databytes, ptr + 8), 15);</span>
+<span class="cstat-no" title="statement not covered" >            updateRun(fI(b, c, d), 0xeb86d391, bytes_to_int32(databytes, ptr + 36), 21);</span>
+&nbsp;
+            // update buffers
+<span class="cstat-no" title="statement not covered" >            h0 = _add(h0, a);</span>
+<span class="cstat-no" title="statement not covered" >            h1 = _add(h1, b);</span>
+<span class="cstat-no" title="statement not covered" >            h2 = _add(h2, c);</span>
+<span class="cstat-no" title="statement not covered" >            h3 = _add(h3, d);</span>
+        }
+        // Done! Convert buffers to 128 bit (LE)
+<span class="cstat-no" title="statement not covered" >        return int128le_to_hex(h3, h2, h1, h0).toUpperCase();</span>
+    };
+    exports.faultylabs = faultylabs;
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 23 2016 21:51:19 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
