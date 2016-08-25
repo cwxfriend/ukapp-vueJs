@@ -1,7 +1,7 @@
 {
-  "name": "Vue-Cnodejs",
+  "name": "Vue",
   "version": "1.0.0",
-  "description": "用Vue.js 重写Cnodejs社区",
+  "description": "用Vue.js写的公司项目",
   "main": "index.html",
   "scripts": {
     "start": "npm run dist && npm run server && start http://localhost:8090",
@@ -18,7 +18,6 @@
     "url": "https://github.com/cwxfriend/ukapp-vueJs"
   },
   "keywords": [
-    "cnode",
     "WebApp",
     "Vue",
     "Webpack",
